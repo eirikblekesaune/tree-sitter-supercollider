@@ -269,6 +269,20 @@ var string = "hej med Dig !#)¤!¤AZ";
       (string ))))
 
 ==================
+literal string with forward slashes
+==================
+var string = "aaa/bbb/ccc";
+
+---
+(source_file
+  (variable_definition
+    (variable
+      (local_var
+        (identifier )))
+    (literal
+      (string ))))
+
+==================
 literal symbol slashed
 ==================
 var sym = \averyLongSymbol;
@@ -286,6 +300,20 @@ var sym = \averyLongSymbol;
 literal symbol single quoted
 ==================
 var sym = 'averyLongSymbol';
+
+---
+(source_file
+  (variable_definition
+    (variable
+      (local_var
+        (identifier )))
+    (literal
+        (symbol (identifier)))))
+
+==================
+literal symbol single quoted with slashes
+==================
+var sym = 'avery/long/symbol';
 
 ---
 (source_file
